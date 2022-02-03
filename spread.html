@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Virus</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .loadScreen {
+            z-index: 2;
+            background-color: #fff;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            transition: .3s;
+        }
+
+        .loadScreen .load-spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loadScreen">
+        <div class="load-spin">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex">
+            <a href="./" class="btn btn-danger me-4 align-self-center home-btn">หน้าหลัก</a>
+            <a href="whatisvirus.html" class="btn btn-danger me-4 align-self-center home-btn">ไวรัสคืออะไร</a>
+            <a href="spread.html" class="btn btn-danger me-4 align-self-center home-btn home-btn-active">การก่อโรค</a>
+            <a href="benefit.html" class="btn btn-danger me-4 align-self-center home-btn">ประโยชน์</a>
+
+            <div class="ms-auto d-md-flex d-none">
+                <img class="ms-auto align-self-auto me-3 " src="imgs/coronavirus-5107715_960_720.png" width="70px"
+                    height="70px">
+                <div>
+                    <h1>VIRUS</h1>
+                    <h2>ไวรัส</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="card big-card">
+                <div class="card-body">
+                    <h1>
+                        <center>การก่อโรค</center>
+                    </h1>
+                    <p>
+                        ความจริงอาการป่วยที่เกิดจากการติดเชื้อไวรัสเป็นอาการที่เกิดจากปฏิกิริยาทางภูมิคุ้มกันของเราเองทั้งสิ้น
+                        ซึ่งผิดกับการก่อโรคของเชื้ออื่น ๆ ที่เชื้อสามารถสร้างสารพิษหรือทำให้เกิดฝีหนองตามอวัยวะต่าง ๆ
+                        ได้ด้วย ปฏิกิริยาทางภูมิคุ้มกันของเรามี 3 แบบ คือ
+                    </p>
+                    <ol>
+                        <li>ปฏิกิริยาตามระบบที่มีตัวรับไวรัสชนิดนั้น ๆ โดยเฉพาะที่ผิวเซลล์ (specifice membrane receptor)
+                            เช่น Rhino virus จะจับกับ ICAM-1 ของเยื่อบุจมูก, Rotavirus
+                            จะจับกับเซลล์เยื่อบุทางเดินอาหารเฉพาะที่โตเต็มที่แล้วในบริเวณลำไส้เล็กส่วนต้น, Epstein-Barr
+                            virus จะจับกับ CR2 ของเม็ดเลือดขาวชนิด B-cell เซลล์ที่ถูกไวรัสจับไว้นี้จะเกิดปฏิกริยาต่าง ๆ
+                            เช่น ที่เยื่อบุจมูกก็จะเกิดการหลั่งน้ำมูก
+                            ที่เยื่อบุทางเดินอาหารก็จะขับสารน้ำและมีการพัดของขนอ่อนเพื่อขับตัวไวรัสออกไป
+                            เราจึงรู้สึกว่าท้องเดิน แต่ในเซลล์บางชนิด เช่น เม็ดเลือดขาว
+                            ก็อาจไม่แสดงอาการอะไรให้เห็นนอกจากการเพิ่มจำนวนในเลือด ซึ่งต้องเจาะเลือดตรวจจึงจะทราบได้
+                        </li>
+
+                        <li>ปฏิกิริยาตอบสนองโดยทั่วไปเมื่อมีสิ่งแปลกปลอมทุกชนิดเข้ามาในร่างกาย คือ มีไข้ขึ้น,
+                            มีภาวะเป็นกรดในเลือดเพิ่มขึ้น, และมีการหลั่งสารอินเตอร์เฟียรอน
+                            ซึ่งทั้งสามภาวะนี้จะยับยั้งการแบ่งตัวของไวรัสได้ด้วย</li>
+
+                        <li>ปฏิกิริยา<u>สร้าง</u>และ<u>เรียก</u>แอนติบอดีเฉพาะ (specific antibody)
+                            ออกมาทำลายเชื้อไวรัสสายพันธุ์นั้น ๆ
+                            ปฏิกิริยานี้ถือเป็นกลไกตามธรรมชาติในการรักษาตัวเองที่มีประสิทธิภาพที่สุด
+                            หากร่างกายเรายังไม่เคยได้รับเชื้อไวรัสชนิดนั้นมาก่อนทั้งในรูปวัคซีนหรือการติดเชื้อ
+                            ร่างกายจะใช้เวลาในการสร้างแอนติบอดีเฉพาะอย่างน้อย 2 สัปดาห์หลังได้รับเชื้อ
+                            เมื่อรวมระยะฟักตัวของโรคและระยะที่เกิดอาการ โรคไวรัสโดยทั่วไปจึงหายได้เองภายในเวลาประมาณ 1
+                            สัปดาห์หลังเริ่มมีอาการ
+                            และนี่ก็เป็นสาเหตุที่เมื่อเราอายุมากขึ้นจะมีอาการของโรคติดเชื้อไวรัสน้อยลงไปเรื่อย ๆ
+                            เมื่อเทียบกับเด็กและคนหนุ่มสาว
+                            ซึ่งก็เป็นเพราะร่างกายของเราสร้างแอนติบอดีสะสมไว้แล้วจากประสบการณ์การดำรงชีวิตที่ผ่านมานั่นเอง
+                        </li>
+                    </ol>
+                    <p>
+                        โดยมีโรคที่พบบ่อยได้แก่ โรคหวัดธรรมดา โรคไข้หวัดใหญ่
+                        โรคหัด โรคคางทูม โรคอีสุกอีใส โรคโปลิโอ โรคหัดเยอรมัน และโรคไข้เลือดออก
+                        โรคพิษสุนัขบ้า โรคไข้สมองอักเสบ โรคไข้ทรพิษ
+                        โรคเริม โรคงูสวัด โรคไวรัสตับอักเสบ โรคตาแดงจากไวรัส
+                        โรคเอดส์
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            $(".loadScreen").fadeOut();
+        })
+    </script>
+</body>
+
+</html>

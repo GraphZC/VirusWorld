@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Virus</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .loadScreen {
+            z-index: 2;
+            background-color: #fff;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            transition: .3s;
+        }
+        .loadScreen .load-spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loadScreen">
+        <div class="load-spin">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-9 virus-content">
+            <a href="./" class="back-icon">
+                <i class="fas fa-chevron-left b-icon"></i> กลับ
+            </a>
+            <div class="mt-4">
+                <h1 id="name_en">name_en</h1>
+                <h2 id="name_th">name_th</h2>
+                <h5><b>Group</b> : <span id="group">group</span></h5>
+                <h5><b>Phylum</b> : <span id="phylum">phylum</span></h5>
+                <center><img src="" id="virus-img-side-2" width="70%" alt="" class="align-content-center d-md-none"></center>
+            </div>
+            <div class="mt-4">
+                <div class="accordion accordion-flush" id="virus-content-drop">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <b>การค้นพบ</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#virus-content-drop">
+                            <div class="accordion-body" id="founded">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <b>การระบาด</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#virus-content-drop">
+                            <div class="accordion-body" id="disease">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <b>ลักษณะของโรค</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#virus-content-drop">
+                            <div class="accordion-body" id="disease_nature">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <b>ระยะฟักตัว</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#virus-content-drop">
+                            <div class="accordion-body" id="incubate">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                <b>การป้องกัน</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#virus-content-drop">
+                            <div class="accordion-body" id="protect">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 virus-img d-none d-md-block" style="background-color: #f6c78c;">
+            <img src="" id="virus-img-side" width="80%" alt="" class="align-content-center ">
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-url.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var get_name = $.url('?name')
+            $.getJSON('virus-data.json', function (data) {
+                let virus = data[get_name]
+                if (!virus) {
+                    window.location.href = './'
+                }
+                $("#name_en").text(virus.name_en)
+                $("#name_th").text(virus.name_th)
+                $("#group").text(virus.group)
+                $("#phylum").text(virus.phylum)
+                $("#founded").html(virus.founded)
+                $("#disease").html(virus.disease)
+                $("#disease_nature").html(virus.disease_nature)
+                $("#incubate").html(virus.incubate)
+                $("#protect").html(virus.protect)
+                $("#virus-img-side").attr("src", "imgs/" + virus.image)
+                $("#virus-img-side-2").attr("src", "imgs/" + virus.image)
+                $(".loadScreen").fadeOut();
+            })
+        })
+    </script>
+</body>
+
+</html>
